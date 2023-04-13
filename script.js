@@ -11,25 +11,30 @@ window.onscroll = () => {
   menu.classList.remove("active");
 };
 
-ScrollReveal({
-  reset: true,
-  distance: "80px",
-  duration: 2000,
-  delay: 200,
-});
+const openModalOne = () => {
+  document.querySelector(".one").classList.add("show-modal");
+};
+const closeModalOne = () => {
+  document.querySelector(".one").classList.remove("show-modal");
+};
 
-ScrollReveal().reveal(".home, .hanging, footer, .about-img", { origin: "top" });
-ScrollReveal().reveal(
-  ".home-img, .about p, .portfolio-box, .contact .form-holder, .team-holder, .blog-holder",
-  {
-    origin: "bottom",
-  }
-);
-ScrollReveal().reveal(
-  ".card, .portfolio .text, .team .text, .client-card, .contact .text",
-  { origin: "left" }
-);
-ScrollReveal().reveal(
-  ".home-left p, .about h1, .testimonials .text, .blog .text, .services .text",
-  { origin: "right" }
-);
+const openModalTwo = () => {
+  document.querySelector(".two").classList.add("show-modal");
+};
+const closeModalTwo = () => {
+  document.querySelector(".two").classList.remove("show-modal");
+};
+
+const openModalThree = () => {
+  document.querySelector(".three").classList.add("show-modal");
+};
+const closeModalThree = () => {
+  document.querySelector(".three").classList.remove("show-modal");
+};
+
+const openModalFour = () => {
+  document.querySelector(".four").classList.add("show-modal");
+};
+const closeModalFour = () => {
+  document.querySelector(".four").classList.remove("show-modal");
+};

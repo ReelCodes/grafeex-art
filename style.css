@@ -510,6 +510,9 @@ footer {
 footer p {
   color: #555;
 }
+footer a {
+  color: #333;
+}
 footer h2 {
   color: #333;
 }
@@ -595,11 +598,128 @@ footer h2 {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--primary-color);
-  border-radius: 8px;
+  border-radius: 20px;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.8);
 }
 .image img {
-  max-width: 90%;
-  max-height: 90%;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 5%;
+}
+.container .header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container p {
+  line-height: 25px;
+}
+.container .intro h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+.container .team-info .team-member {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  gap: 40px;
+}
+.container ul {
+  margin: 20px 0;
+}
+.container ul li {
+  margin: 0 30px;
+  line-height: 25px;
+}
+.profile-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 30px;
+}
+.profile-images img {
+  width: 100%;
+  height: 300px;
+}
+.painting h3 {
+  margin: 20px 0 10px;
+}
+.modal-container {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  padding-top: -500px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: visibiliy 1s;
+  display: flex;
+  justify-content: center;
+}
+.modal {
+  background-color: #fefefe;
+  width: 350px;
+  height: fit-content;
+}
+.modal-header,
+.modal-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  height: 50px;
+  color: #fff;
+}
+.close {
+  cursor: pointer;
+  font-size: 20px;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal p {
+  color: #000;
+  margin: 0;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+  padding-top: 50px;
+}
+#service-container {
+  height: 100vh;
+  width: 100%;
+}
+.box{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* responsive design styles */
 @media screen and (max-width: 1500px) {
@@ -802,6 +922,9 @@ footer h2 {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
+  .container .team-info .team-member {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 500px) {
   .about h1,
@@ -867,5 +990,8 @@ footer h2 {
   }
   .gallery-header h1 {
     font-size: 25px;
+  }
+  .profile-images {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
