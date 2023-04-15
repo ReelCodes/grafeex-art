@@ -538,6 +538,31 @@ footer h2 {
 .footer-address span {
   color: var(--primary-color);
 }
+.partners{
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #f6f7f9;
+}
+.partners h2{
+  color: #333;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: 30px;
+}
+.partners h1{
+  color: var(--primary-color);
+}
+.moving{
+  display: flex;
+  gap: 20px;
+}
+.grid {
+  display: none;
+}
 .social-links {
   display: flex;
   gap: 20px;
@@ -986,5 +1011,17 @@ footer h2 {
   }
   .profile-images {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .marquee{
+    display: none;
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .grid img{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
   }
 }
